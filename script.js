@@ -36,6 +36,43 @@ dropdownItems.forEach((dropdownItem) => {
 });
 // End of Navigation
 
+// Counter Animation
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute("data-target"));
+  const increment = target / 200;
+  let count = 0;
+
+  const updateCounter = () => {
+    if (count < target) {
+      count += increment;
+      if (count > target) count = target;
+
+      let displayValue = Math.floor(count);
+      if (displayValue >= 1000000) {
+        displayValue = (displayValue / 1000000).toFixed(1) + "M";
+      } else if (displayValue >= 1000) {
+        displayValue = (displayValue / 1000).toFixed(0) + "K";
+      }
+
+      element.textContent = displayValue;
+      requestAnimationFrame(updateCounter);
+    } else {
+      let finalValue = target;
+      if (finalValue >= 1000000) {
+        finalValue = (finalValue / 1000000).toFixed(0) + "M+";
+      } else if (finalValue >= 1000) {
+        finalValue = (finalValue / 1000).toFixed(0) + "K+";
+      } else {
+        finalValue = finalValue + "+";
+      }
+      element.textContent = finalValue;
+    }
+  };
+
+  updateCounter();
+}
+
+// Intersection Observer for animations
 const observerOptions = {
   threshold: 0.3,
   rootMargin: "0px 0px -50px 0px",
@@ -92,8 +129,44 @@ const section4Observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// Counter Section Observer
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const counterHeading = entry.target.querySelector(".counter-heading");
+      const counterItems = entry.target.querySelectorAll(".counter-item");
+      const counterNumbers = entry.target.querySelectorAll(".counter-number");
+
+      setTimeout(() => {
+        counterHeading.classList.add("animate");
+      }, 200);
+      setTimeout(() => {
+        counterItems.forEach((item, index) => {
+          item.classList.add("animate");
+        });
+
+        setTimeout(() => {
+          counterNumbers.forEach((counter) => {
+            animateCounter(counter);
+          });
+        }, 800);
+
+        setTimeout(() => {
+          counterItems.forEach((item) => {
+            item.style.transition =
+              "background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease";
+          });
+        }, 1500);
+      }, 500);
+
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
 const section3 = document.querySelector(".section-3");
 const section4 = document.querySelector(".section-4");
+const counterSection = document.querySelector(".user-counter-section");
 
 if (section3) {
   section3Observer.observe(section3);
@@ -101,4 +174,8 @@ if (section3) {
 
 if (section4) {
   section4Observer.observe(section4);
+}
+
+if (counterSection) {
+  counterObserver.observe(counterSection);
 }
