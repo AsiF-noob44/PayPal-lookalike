@@ -37,6 +37,31 @@ dropdownItems.forEach((dropdownItem) => {
 
 // Navigation Event Listeners
 document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener("click", () => {
+      mobileMenuToggle.classList.toggle("active");
+      navList.classList.toggle("mobile-active");
+    });
+
+    const navLinks = document.querySelectorAll(".nav-list-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenuToggle.classList.remove("active");
+        navList.classList.remove("mobile-active");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!navList.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuToggle.classList.remove("active");
+        navList.classList.remove("mobile-active");
+      }
+    });
+  }
+
   const logos = document.querySelectorAll(
     ".navbar-logo, .signup-page-logo, .login-page-logo, .logo"
   );
