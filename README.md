@@ -1,1 +1,1 @@
-# https://asif-noob44.github.io/PayPal-lookalike/index.html
+# https://asif-noob44.github.io/PayPal-lookalike/
