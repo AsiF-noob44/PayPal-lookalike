@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PayPal Partners - Join our ecosystem of developers, integrators, and technology partners.">
+    <meta name="keywords" content="PayPal, partners, developers, integrations, API, technology partners">
+    <title>PayPal Partners & Developers</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico">
+    <link rel="shortcut icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico">
+
+    <link rel="stylesheet" href="partners.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="partners-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="p-1">P</span>
+                    <span class="p-2">P</span>
+                    PayPal
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn home-btn">
+                        <i class="fas fa-home"></i> Go Home
+                    </button>
+                    <button class="nav-btn login-btn">Log In</button>
+                    <button class="nav-btn signup-btn">Sign Up</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">PayPal Partners & Developers</h1>
+                    <p class="hero-subtitle">Join our thriving ecosystem of partners, developers, and innovators. Build
+                        powerful integrations, scale your business, and create amazing payment experiences.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-btn primary">Become a Partner</button>
+                        <button class="cta-btn secondary">Explore APIs</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>PayPal API</span>
+                        </div>
+                        <div class="code-content">
+                            <code>
+                                <span class="keyword">const</span> <span class="variable">paypal</span> = <span class="function">require</span>(<span class="string">'@paypal/checkout-server-sdk'</span>);<br><br>
+                                <span class="keyword">let</span> <span class="variable">request</span> = <span class="keyword">new</span> <span class="function">paypal.orders.OrdersCreateRequest</span>();<br>
+                                <span class="variable">request</span>.<span class="function">prefer</span>(<span class="string">"return=representation"</span>);<br>
+                                <span class="variable">request</span>.<span class="function">requestBody</span>({<br>
+                                &nbsp;&nbsp;<span class="property">intent</span>: <span class="string">'CAPTURE'</span>,<br>
+                                &nbsp;&nbsp;<span class="property">purchase_units</span>: [{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">amount</span>: {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">currency_code</span>: <span class="string">'USD'</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">value</span>: <span class="string">'100.00'</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;}]<br>
+                                });
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Types Section -->
+        <section class="partner-types">
+            <div class="container">
+                <h2 class="section-title">Partner Opportunities</h2>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Developers</h3>
+                        <p>Build innovative payment solutions using our comprehensive APIs and SDKs.</p>
+                        <ul class="partner-features">
+                            <li>REST APIs & GraphQL</li>
+                            <li>SDKs for all platforms</li>
+                            <li>Sandbox environment</li>
+                            <li>Developer documentation</li>
+                            <li>Technical support</li>
+                        </ul>
+                        <button class="partner-btn">Start Building</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Technology Partners</h3>
+                        <p>Integrate PayPal into your platform and offer payment solutions to your customers.</p>
+                        <ul class="partner-features">
+                            <li>White-label solutions</li>
+                            <li>Revenue sharing</li>
+                            <li>Co-marketing support</li>
+                            <li>Technical integration</li>
+                            <li>Partner portal access</li>
+                        </ul>
+                        <button class="partner-btn">Apply Now</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Marketplace Partners</h3>
+                        <p>Enable seamless payments for your marketplace sellers and buyers.</p>
+                        <ul class="partner-features">
+                            <li>Split payments</li>
+                            <li>Seller onboarding</li>
+                            <li>Compliance support</li>
+                            <li>Multi-party payments</li>
+                            <li>Fraud protection</li>
+                        </ul>
+                        <button class="partner-btn">Learn More</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Integration Partners</h3>
+                        <p>Help businesses integrate PayPal into their existing systems and workflows.</p>
+                        <ul class="partner-features">
+                            <li>Certified integrations</li>
+                            <li>Training programs</li>
+                            <li>Sales enablement</li>
+                            <li>Lead sharing</li>
+                            <li>Technical certification</li>
+                        </ul>
+                        <button class="partner-btn">Get Certified</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Solution Providers</h3>
+                        <p>Expand your reach by offering PayPal solutions to clients worldwide.</p>
+                        <ul class="partner-features">
+                            <li>International support</li>
+                            <li>Multi-currency processing</li>
+                            <li>Localized onboarding</li>
+                            <li>Global compliance</li>
+                            <li>Dedicated account manager</li>
+                        </ul>
+                        <button class="partner-btn">Expand Globally</button>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation Partners</h3>
+                        <p>Collaborate on cutting-edge payment technologies and pilot new features.</p>
+                        <ul class="partner-features">
+                            <li>Early access to APIs</li>
+                            <li>Beta program participation</li>
+                            <li>Joint R&D initiatives</li>
+                            <li>Innovation grants</li>
+                            <li>Direct feedback channels</li>
+                        </ul>
+                        <button class="partner-btn">Join Innovation</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Resources Section -->
+        <section class="developer-resources">
+            <div class="container">
+                <h2 class="section-title">Developer Resources</h2>
+                <div class="resources-content">
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="resource-text">
+                            <h3>Documentation</h3>
+                            <p>Comprehensive guides, API references, and tutorials to help you integrate PayPal quickly
+                                and efficiently. Our documentation covers everything from basic setup to advanced
+                                features.</p>
+                            <a href="#" class="resource-link">View Docs <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="resource-text">
+                            <h3>Sandbox Environment</h3>
+                            <p>Test your integrations safely in our sandbox environment before going live. Create test
+                                accounts, simulate transactions, and debug your implementations.</p>
+                            <a href="#" class="resource-link">Access Sandbox <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="resource-text">
+                            <h3>SDKs & Libraries</h3>
+                            <p>Download our official SDKs and libraries for popular programming languages and
+                                frameworks. Get started quickly with sample code and examples.</p>
+                            <a href="#" class="resource-link">Download SDKs <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="resource-text">
+                            <h3>Developer Community</h3>
+                            <p>Connect with other developers, ask questions, share experiences, and stay updated with
+                                the latest PayPal developer news and announcements.</p>
+                            <a href="#" class="resource-link">Join Community <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="success-stories">
+            <div class="container">
+                <h2 class="section-title">Partner Success Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="images/person-1.jpg" alt="Partner Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>TechCorp Solutions</h3>
+                            <p>"Partnering with PayPal transformed our business. We've processed over $50M in
+                                transactions and expanded to 25 new markets."</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-number">$50M+</span>
+                                    <span class="stat-label">Processed</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">25</span>
+                                    <span class="stat-label">New Markets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="images/person-2.jpg" alt="Partner Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>MarketPlace Pro</h3>
+                            <p>"PayPal's marketplace solutions helped us onboard 10,000+ sellers and increase
+                                transaction volume by 300%."</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-number">10K+</span>
+                                    <span class="stat-label">Sellers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">300%</span>
+                                    <span class="stat-label">Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="images/person-3.jpg" alt="Partner Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h3>DevStudio Inc</h3>
+                            <p>"Our PayPal integration reduced development time by 60% and improved conversion rates for
+                                our clients."</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-number">60%</span>
+                                    <span class="stat-label">Time Saved</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">15%</span>
+                                    <span class="stat-label">Higher Conversion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Partner with PayPal?</h2>
+                <p>Join thousands of partners who are building the future of payments with PayPal.</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn">Become a Partner</button>
+                    <button class="cta-btn secondary">Contact Partner Team</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 PayPal by Asif. All rights reserved.</p>
+
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
